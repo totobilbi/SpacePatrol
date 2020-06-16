@@ -13,6 +13,8 @@ import SpriteKit
 
 class HealthBar:SKNode {
     var hatul:Int = 0
+    var salfaslflaslf = 12
+    var lsalsla = 13
     static var currentHealthBar:HealthBar = HealthBar()
     static var reduceAmount:CGFloat = 0
     var bar:SKSpriteNode?
