@@ -1,0 +1,909 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D93623280987ED04FADECE7 /* Pods_Space_Patrol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEE194CA2898AA5E9EDBE4E /* Pods_Space_Patrol.framework */; };
+		4EF4B1D204AC162BAE41B283 /* Pods_Space_Patrol_Space_PatrolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E61E09A380195C3AC05F4C /* Pods_Space_Patrol_Space_PatrolUITests.framework */; };
+		6D52F5AC24960F7C002B896B /* HealthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52F5AB24960F7C002B896B /* HealthBar.swift */; };
+		6D52F5B324989C2A002B896B /* EnemiesName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D52F5B224989C2A002B896B /* EnemiesName.swift */; };
+		6D5D497924618CDB00E74F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D497824618CDB00E74F51 /* AppDelegate.swift */; };
+		6D5D497B24618CDB00E74F51 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D497A24618CDB00E74F51 /* GameScene.sks */; };
+		6D5D497D24618CDB00E74F51 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D497C24618CDB00E74F51 /* Actions.sks */; };
+		6D5D497F24618CDB00E74F51 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D497E24618CDB00E74F51 /* GameScene.swift */; };
+		6D5D498124618CDB00E74F51 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D498024618CDB00E74F51 /* GameViewController.swift */; };
+		6D5D498424618CDB00E74F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D498224618CDB00E74F51 /* Main.storyboard */; };
+		6D5D498624618CDD00E74F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D498524618CDD00E74F51 /* Assets.xcassets */; };
+		6D5D498924618CDD00E74F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D498724618CDD00E74F51 /* LaunchScreen.storyboard */; };
+		6D5D499424618CDD00E74F51 /* Space_PatrolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D499324618CDD00E74F51 /* Space_PatrolTests.swift */; };
+		6D5D499F24618CDD00E74F51 /* Space_PatrolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D499E24618CDD00E74F51 /* Space_PatrolUITests.swift */; };
+		6D5D49AD246198B600E74F51 /* bulletSoundEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D49AC246198B600E74F51 /* bulletSoundEffect.mp3 */; };
+		6D5D49F32464258600E74F51 /* explosionSoudEffect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D49F22464258600E74F51 /* explosionSoudEffect.mp3 */; };
+		6D5D49F72464269100E74F51 /* theboldfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D5D49F62464266A00E74F51 /* theboldfont.ttf */; };
+		6D5D49F9246448A900E74F51 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5D49F8246448A900E74F51 /* GameOverScene.swift */; };
+		6DE804302473F91900E449D7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8042F2473F91900E449D7 /* Router.swift */; };
+		6DE804322473F9FE00E449D7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DE804312473F9FE00E449D7 /* Login.storyboard */; };
+		6DE804342473FBDC00E449D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE804332473FBDC00E449D7 /* GoogleService-Info.plist */; };
+		6DE804372473FC5200E449D7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE804352473FC5200E449D7 /* RegisterViewController.swift */; };
+		6DE8043A2473FCA000E449D7 /* UserValidation+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE804392473FCA000E449D7 /* UserValidation+extensions.swift */; };
+		6DE8043C2473FCBE00E449D7 /* ShowHUD+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8043B2473FCBE00E449D7 /* ShowHUD+extensions.swift */; };
+		6DE804402474045A00E449D7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8043F2474045A00E449D7 /* FirstViewController.swift */; };
+		6DE8044224742BD800E449D7 /* UIImage+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8044124742BD800E449D7 /* UIImage+extensions.swift */; };
+		6DE804442474481900E449D7 /* UIViewController+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE804432474481900E449D7 /* UIViewController+extensions.swift */; };
+		6DE80446247451FD00E449D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE80445247451FD00E449D7 /* LoginViewController.swift */; };
+		6DE804482476D05100E449D7 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE804472476D05100E449D7 /* MainMenuScene.swift */; };
+		6DE8044C247845C000E449D7 /* EpisodeSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8044B247845C000E449D7 /* EpisodeSelectScene.swift */; };
+		6DE8044E247845CE00E449D7 /* LevelSelectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8044D247845CE00E449D7 /* LevelSelectScene.swift */; };
+		6DE80456247D9AF200E449D7 /* LevelDetailsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE80455247D9AF200E449D7 /* LevelDetailsScene.swift */; };
+		6DE80458247DBFFA00E449D7 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE80457247DBFFA00E449D7 /* String+extensions.swift */; };
+		6DE8045A248F60B300E449D7 /* Bosses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE80459248F60B300E449D7 /* Bosses.swift */; };
+		6DE8045E248F98D100E449D7 /* Rotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8045D248F98D100E449D7 /* Rotations.swift */; };
+		6DED76302464970300074CF5 /* SKScene+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED762F2464970300074CF5 /* SKScene+extensions.swift */; };
+		6DED763D2465717300074CF5 /* Levels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DED763C2465717300074CF5 /* Levels.swift */; };
+		E1EC61006413F721C563326B /* Pods_Space_PatrolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CB3450C2C707C979FB52C /* Pods_Space_PatrolTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D5D499024618CDD00E74F51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D5D496D24618CDB00E74F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D5D497424618CDB00E74F51;
+			remoteInfo = "Space Patrol";
+		};
+		6D5D499B24618CDD00E74F51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D5D496D24618CDB00E74F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D5D497424618CDB00E74F51;
+			remoteInfo = "Space Patrol";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		016B77A2D16C7FCF9BB558DA /* Pods-Space Patrol.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Patrol.release.xcconfig"; path = "Target Support Files/Pods-Space Patrol/Pods-Space Patrol.release.xcconfig"; sourceTree = "<group>"; };
+		6077076EBD1AD4AC3642CD1F /* Pods-Space PatrolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space PatrolTests.debug.xcconfig"; path = "Target Support Files/Pods-Space PatrolTests/Pods-Space PatrolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60E61E09A380195C3AC05F4C /* Pods_Space_Patrol_Space_PatrolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_Patrol_Space_PatrolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B851B4F544DBBC138627393 /* Pods-Space Patrol.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Patrol.debug.xcconfig"; path = "Target Support Files/Pods-Space Patrol/Pods-Space Patrol.debug.xcconfig"; sourceTree = "<group>"; };
+		6D52F5AB24960F7C002B896B /* HealthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBar.swift; sourceTree = "<group>"; };
+		6D52F5B224989C2A002B896B /* EnemiesName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemiesName.swift; sourceTree = "<group>"; };
+		6D5D497524618CDB00E74F51 /* Space Patrol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space Patrol.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5D497824618CDB00E74F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D5D497A24618CDB00E74F51 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		6D5D497C24618CDB00E74F51 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		6D5D497E24618CDB00E74F51 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		6D5D498024618CDB00E74F51 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		6D5D498324618CDB00E74F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D5D498524618CDD00E74F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D5D498824618CDD00E74F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D5D498A24618CDD00E74F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D5D498F24618CDD00E74F51 /* Space PatrolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space PatrolTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5D499324618CDD00E74F51 /* Space_PatrolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_PatrolTests.swift; sourceTree = "<group>"; };
+		6D5D499524618CDD00E74F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D5D499A24618CDD00E74F51 /* Space PatrolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space PatrolUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5D499E24618CDD00E74F51 /* Space_PatrolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_PatrolUITests.swift; sourceTree = "<group>"; };
+		6D5D49A024618CDD00E74F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D5D49AC246198B600E74F51 /* bulletSoundEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bulletSoundEffect.mp3; sourceTree = "<group>"; };
+		6D5D49F22464258600E74F51 /* explosionSoudEffect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosionSoudEffect.mp3; sourceTree = "<group>"; };
+		6D5D49F62464266A00E74F51 /* theboldfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = theboldfont.ttf; sourceTree = "<group>"; };
+		6D5D49F8246448A900E74F51 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		6DE8042F2473F91900E449D7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		6DE804312473F9FE00E449D7 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		6DE804332473FBDC00E449D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6DE804352473FC5200E449D7 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6DE804392473FCA000E449D7 /* UserValidation+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserValidation+extensions.swift"; sourceTree = "<group>"; };
+		6DE8043B2473FCBE00E449D7 /* ShowHUD+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShowHUD+extensions.swift"; sourceTree = "<group>"; };
+		6DE8043F2474045A00E449D7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		6DE8044124742BD800E449D7 /* UIImage+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extensions.swift"; sourceTree = "<group>"; };
+		6DE804432474481900E449D7 /* UIViewController+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extensions.swift"; sourceTree = "<group>"; };
+		6DE80445247451FD00E449D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6DE804472476D05100E449D7 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		6DE8044B247845C000E449D7 /* EpisodeSelectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeSelectScene.swift; sourceTree = "<group>"; };
+		6DE8044D247845CE00E449D7 /* LevelSelectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectScene.swift; sourceTree = "<group>"; };
+		6DE80455247D9AF200E449D7 /* LevelDetailsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDetailsScene.swift; sourceTree = "<group>"; };
+		6DE80457247DBFFA00E449D7 /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
+		6DE80459248F60B300E449D7 /* Bosses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bosses.swift; sourceTree = "<group>"; };
+		6DE8045D248F98D100E449D7 /* Rotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotations.swift; sourceTree = "<group>"; };
+		6DED762F2464970300074CF5 /* SKScene+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+extensions.swift"; sourceTree = "<group>"; };
+		6DED763C2465717300074CF5 /* Levels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Levels.swift; sourceTree = "<group>"; };
+		923CB3450C2C707C979FB52C /* Pods_Space_PatrolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_PatrolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABEE194CA2898AA5E9EDBE4E /* Pods_Space_Patrol.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Space_Patrol.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4D37535529049018F8CB46 /* Pods-Space PatrolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space PatrolTests.release.xcconfig"; path = "Target Support Files/Pods-Space PatrolTests/Pods-Space PatrolTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8E25BA708D9571A698C1A0D /* Pods-Space Patrol-Space PatrolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Patrol-Space PatrolUITests.debug.xcconfig"; path = "Target Support Files/Pods-Space Patrol-Space PatrolUITests/Pods-Space Patrol-Space PatrolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D456F695870B84749E46335A /* Pods-Space Patrol-Space PatrolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Space Patrol-Space PatrolUITests.release.xcconfig"; path = "Target Support Files/Pods-Space Patrol-Space PatrolUITests/Pods-Space Patrol-Space PatrolUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D5D497224618CDB00E74F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D93623280987ED04FADECE7 /* Pods_Space_Patrol.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5D498C24618CDD00E74F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EC61006413F721C563326B /* Pods_Space_PatrolTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5D499724618CDD00E74F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EF4B1D204AC162BAE41B283 /* Pods_Space_Patrol_Space_PatrolUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A00D82A11CAD2DF1BFB6B41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B851B4F544DBBC138627393 /* Pods-Space Patrol.debug.xcconfig */,
+				016B77A2D16C7FCF9BB558DA /* Pods-Space Patrol.release.xcconfig */,
+				C8E25BA708D9571A698C1A0D /* Pods-Space Patrol-Space PatrolUITests.debug.xcconfig */,
+				D456F695870B84749E46335A /* Pods-Space Patrol-Space PatrolUITests.release.xcconfig */,
+				6077076EBD1AD4AC3642CD1F /* Pods-Space PatrolTests.debug.xcconfig */,
+				AC4D37535529049018F8CB46 /* Pods-Space PatrolTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D5D496C24618CDB00E74F51 = {
+			isa = PBXGroup;
+			children = (
+				6D5D497724618CDB00E74F51 /* Space Patrol */,
+				6D5D499224618CDD00E74F51 /* Space PatrolTests */,
+				6D5D499D24618CDD00E74F51 /* Space PatrolUITests */,
+				6D5D497624618CDB00E74F51 /* Products */,
+				2A00D82A11CAD2DF1BFB6B41 /* Pods */,
+				8C07DDE103EFE0F94C1BF0B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6D5D497624618CDB00E74F51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D497524618CDB00E74F51 /* Space Patrol.app */,
+				6D5D498F24618CDD00E74F51 /* Space PatrolTests.xctest */,
+				6D5D499A24618CDD00E74F51 /* Space PatrolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D5D497724618CDB00E74F51 /* Space Patrol */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8042F2473F91900E449D7 /* Router.swift */,
+				6D5D497824618CDB00E74F51 /* AppDelegate.swift */,
+				6D5D497A24618CDB00E74F51 /* GameScene.sks */,
+				6D5D497C24618CDB00E74F51 /* Actions.sks */,
+				6DED763A2465715200074CF5 /* models */,
+				6DED76342465703400074CF5 /* controllers */,
+				6DED76332465701300074CF5 /* storyboards */,
+				6DED76322464974400074CF5 /* scene */,
+				6DED76312464973A00074CF5 /* extensions */,
+				6D5D49F52464263900E74F51 /* sound */,
+				6D5D49F42464263300E74F51 /* fonts */,
+				6D5D498A24618CDD00E74F51 /* Info.plist */,
+				6D5D498524618CDD00E74F51 /* Assets.xcassets */,
+				6DE804332473FBDC00E449D7 /* GoogleService-Info.plist */,
+			);
+			path = "Space Patrol";
+			sourceTree = "<group>";
+		};
+		6D5D499224618CDD00E74F51 /* Space PatrolTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D499324618CDD00E74F51 /* Space_PatrolTests.swift */,
+				6D5D499524618CDD00E74F51 /* Info.plist */,
+			);
+			path = "Space PatrolTests";
+			sourceTree = "<group>";
+		};
+		6D5D499D24618CDD00E74F51 /* Space PatrolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D499E24618CDD00E74F51 /* Space_PatrolUITests.swift */,
+				6D5D49A024618CDD00E74F51 /* Info.plist */,
+			);
+			path = "Space PatrolUITests";
+			sourceTree = "<group>";
+		};
+		6D5D49F42464263300E74F51 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D49F62464266A00E74F51 /* theboldfont.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		6D5D49F52464263900E74F51 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				6D5D49AC246198B600E74F51 /* bulletSoundEffect.mp3 */,
+				6D5D49F22464258600E74F51 /* explosionSoudEffect.mp3 */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
+		6DED76312464973A00074CF5 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6DED762F2464970300074CF5 /* SKScene+extensions.swift */,
+				6DE804392473FCA000E449D7 /* UserValidation+extensions.swift */,
+				6DE8043B2473FCBE00E449D7 /* ShowHUD+extensions.swift */,
+				6DE8044124742BD800E449D7 /* UIImage+extensions.swift */,
+				6DE804432474481900E449D7 /* UIViewController+extensions.swift */,
+				6DE80457247DBFFA00E449D7 /* String+extensions.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		6DED76322464974400074CF5 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				6DE804472476D05100E449D7 /* MainMenuScene.swift */,
+				6DE8044B247845C000E449D7 /* EpisodeSelectScene.swift */,
+				6DE8044D247845CE00E449D7 /* LevelSelectScene.swift */,
+				6DE80455247D9AF200E449D7 /* LevelDetailsScene.swift */,
+				6D5D497E24618CDB00E74F51 /* GameScene.swift */,
+				6D5D49F8246448A900E74F51 /* GameOverScene.swift */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		6DED76332465701300074CF5 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6DE804312473F9FE00E449D7 /* Login.storyboard */,
+				6D5D498224618CDB00E74F51 /* Main.storyboard */,
+				6D5D498724618CDD00E74F51 /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		6DED76342465703400074CF5 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6DE8043F2474045A00E449D7 /* FirstViewController.swift */,
+				6DE80445247451FD00E449D7 /* LoginViewController.swift */,
+				6DE804352473FC5200E449D7 /* RegisterViewController.swift */,
+				6D5D498024618CDB00E74F51 /* GameViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		6DED763A2465715200074CF5 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				6DED763C2465717300074CF5 /* Levels.swift */,
+				6DE80459248F60B300E449D7 /* Bosses.swift */,
+				6DE8045D248F98D100E449D7 /* Rotations.swift */,
+				6D52F5AB24960F7C002B896B /* HealthBar.swift */,
+				6D52F5B224989C2A002B896B /* EnemiesName.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		8C07DDE103EFE0F94C1BF0B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABEE194CA2898AA5E9EDBE4E /* Pods_Space_Patrol.framework */,
+				60E61E09A380195C3AC05F4C /* Pods_Space_Patrol_Space_PatrolUITests.framework */,
+				923CB3450C2C707C979FB52C /* Pods_Space_PatrolTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D5D497424618CDB00E74F51 /* Space Patrol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D5D49A324618CDD00E74F51 /* Build configuration list for PBXNativeTarget "Space Patrol" */;
+			buildPhases = (
+				8AF8C47FD256F4C7E5C0FCE1 /* [CP] Check Pods Manifest.lock */,
+				6D5D497124618CDB00E74F51 /* Sources */,
+				6D5D497224618CDB00E74F51 /* Frameworks */,
+				6D5D497324618CDB00E74F51 /* Resources */,
+				A64E79B5E13A1D67AC927F74 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Space Patrol";
+			productName = "Space Patrol";
+			productReference = 6D5D497524618CDB00E74F51 /* Space Patrol.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D5D498E24618CDD00E74F51 /* Space PatrolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D5D49A624618CDD00E74F51 /* Build configuration list for PBXNativeTarget "Space PatrolTests" */;
+			buildPhases = (
+				BC4B5AED2281791D7E26A70F /* [CP] Check Pods Manifest.lock */,
+				6D5D498B24618CDD00E74F51 /* Sources */,
+				6D5D498C24618CDD00E74F51 /* Frameworks */,
+				6D5D498D24618CDD00E74F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D5D499124618CDD00E74F51 /* PBXTargetDependency */,
+			);
+			name = "Space PatrolTests";
+			productName = "Space PatrolTests";
+			productReference = 6D5D498F24618CDD00E74F51 /* Space PatrolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6D5D499924618CDD00E74F51 /* Space PatrolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D5D49A924618CDD00E74F51 /* Build configuration list for PBXNativeTarget "Space PatrolUITests" */;
+			buildPhases = (
+				5632A1B9B1A4A0553106CC10 /* [CP] Check Pods Manifest.lock */,
+				6D5D499624618CDD00E74F51 /* Sources */,
+				6D5D499724618CDD00E74F51 /* Frameworks */,
+				6D5D499824618CDD00E74F51 /* Resources */,
+				62C02CA95E5820208AEFC91D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D5D499C24618CDD00E74F51 /* PBXTargetDependency */,
+			);
+			name = "Space PatrolUITests";
+			productName = "Space PatrolUITests";
+			productReference = 6D5D499A24618CDD00E74F51 /* Space PatrolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D5D496D24618CDB00E74F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = roeico7;
+				TargetAttributes = {
+					6D5D497424618CDB00E74F51 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					6D5D498E24618CDD00E74F51 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 6D5D497424618CDB00E74F51;
+					};
+					6D5D499924618CDD00E74F51 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 6D5D497424618CDB00E74F51;
+					};
+				};
+			};
+			buildConfigurationList = 6D5D497024618CDB00E74F51 /* Build configuration list for PBXProject "Space Patrol" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D5D496C24618CDB00E74F51;
+			productRefGroup = 6D5D497624618CDB00E74F51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D5D497424618CDB00E74F51 /* Space Patrol */,
+				6D5D498E24618CDD00E74F51 /* Space PatrolTests */,
+				6D5D499924618CDD00E74F51 /* Space PatrolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D5D497324618CDB00E74F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5D49F72464269100E74F51 /* theboldfont.ttf in Resources */,
+				6DE804342473FBDC00E449D7 /* GoogleService-Info.plist in Resources */,
+				6D5D498424618CDB00E74F51 /* Main.storyboard in Resources */,
+				6D5D497B24618CDB00E74F51 /* GameScene.sks in Resources */,
+				6D5D498624618CDD00E74F51 /* Assets.xcassets in Resources */,
+				6D5D498924618CDD00E74F51 /* LaunchScreen.storyboard in Resources */,
+				6D5D497D24618CDB00E74F51 /* Actions.sks in Resources */,
+				6D5D49AD246198B600E74F51 /* bulletSoundEffect.mp3 in Resources */,
+				6D5D49F32464258600E74F51 /* explosionSoudEffect.mp3 in Resources */,
+				6DE804322473F9FE00E449D7 /* Login.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5D498D24618CDD00E74F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5D499824618CDD00E74F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5632A1B9B1A4A0553106CC10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space Patrol-Space PatrolUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C02CA95E5820208AEFC91D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Space Patrol-Space PatrolUITests/Pods-Space Patrol-Space PatrolUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Space Patrol-Space PatrolUITests/Pods-Space Patrol-Space PatrolUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Space Patrol-Space PatrolUITests/Pods-Space Patrol-Space PatrolUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AF8C47FD256F4C7E5C0FCE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space Patrol-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A64E79B5E13A1D67AC927F74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Space Patrol/Pods-Space Patrol-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Space Patrol/Pods-Space Patrol-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Space Patrol/Pods-Space Patrol-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4B5AED2281791D7E26A70F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Space PatrolTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D5D497124618CDB00E74F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DE804402474045A00E449D7 /* FirstViewController.swift in Sources */,
+				6DE8045E248F98D100E449D7 /* Rotations.swift in Sources */,
+				6DE80456247D9AF200E449D7 /* LevelDetailsScene.swift in Sources */,
+				6DE80458247DBFFA00E449D7 /* String+extensions.swift in Sources */,
+				6DE804372473FC5200E449D7 /* RegisterViewController.swift in Sources */,
+				6DE8043C2473FCBE00E449D7 /* ShowHUD+extensions.swift in Sources */,
+				6DE804302473F91900E449D7 /* Router.swift in Sources */,
+				6D52F5AC24960F7C002B896B /* HealthBar.swift in Sources */,
+				6D5D497F24618CDB00E74F51 /* GameScene.swift in Sources */,
+				6D52F5B324989C2A002B896B /* EnemiesName.swift in Sources */,
+				6DE8045A248F60B300E449D7 /* Bosses.swift in Sources */,
+				6DE8044C247845C000E449D7 /* EpisodeSelectScene.swift in Sources */,
+				6D5D498124618CDB00E74F51 /* GameViewController.swift in Sources */,
+				6D5D49F9246448A900E74F51 /* GameOverScene.swift in Sources */,
+				6DED76302464970300074CF5 /* SKScene+extensions.swift in Sources */,
+				6DED763D2465717300074CF5 /* Levels.swift in Sources */,
+				6DE804482476D05100E449D7 /* MainMenuScene.swift in Sources */,
+				6DE8043A2473FCA000E449D7 /* UserValidation+extensions.swift in Sources */,
+				6DE80446247451FD00E449D7 /* LoginViewController.swift in Sources */,
+				6D5D497924618CDB00E74F51 /* AppDelegate.swift in Sources */,
+				6DE804442474481900E449D7 /* UIViewController+extensions.swift in Sources */,
+				6DE8044224742BD800E449D7 /* UIImage+extensions.swift in Sources */,
+				6DE8044E247845CE00E449D7 /* LevelSelectScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5D498B24618CDD00E74F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5D499424618CDD00E74F51 /* Space_PatrolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D5D499624618CDD00E74F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D5D499F24618CDD00E74F51 /* Space_PatrolUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D5D499124618CDD00E74F51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D5D497424618CDB00E74F51 /* Space Patrol */;
+			targetProxy = 6D5D499024618CDD00E74F51 /* PBXContainerItemProxy */;
+		};
+		6D5D499C24618CDD00E74F51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D5D497424618CDB00E74F51 /* Space Patrol */;
+			targetProxy = 6D5D499B24618CDD00E74F51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D5D498224618CDB00E74F51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D5D498324618CDB00E74F51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D5D498724618CDD00E74F51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D5D498824618CDD00E74F51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D5D49A124618CDD00E74F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D5D49A224618CDD00E74F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D5D49A424618CDD00E74F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B851B4F544DBBC138627393 /* Pods-Space Patrol.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Space Patrol/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roeico7.Space-Patrol";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D5D49A524618CDD00E74F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 016B77A2D16C7FCF9BB558DA /* Pods-Space Patrol.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Space Patrol/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roeico7.Space-Patrol";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6D5D49A724618CDD00E74F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6077076EBD1AD4AC3642CD1F /* Pods-Space PatrolTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Space PatrolTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roeico7.Space-PatrolTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Space Patrol.app/Space Patrol";
+			};
+			name = Debug;
+		};
+		6D5D49A824618CDD00E74F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4D37535529049018F8CB46 /* Pods-Space PatrolTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Space PatrolTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roeico7.Space-PatrolTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Space Patrol.app/Space Patrol";
+			};
+			name = Release;
+		};
+		6D5D49AA24618CDD00E74F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E25BA708D9571A698C1A0D /* Pods-Space Patrol-Space PatrolUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Space PatrolUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roeico7.Space-PatrolUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Space Patrol";
+			};
+			name = Debug;
+		};
+		6D5D49AB24618CDD00E74F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D456F695870B84749E46335A /* Pods-Space Patrol-Space PatrolUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Space PatrolUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roeico7.Space-PatrolUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Space Patrol";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D5D497024618CDB00E74F51 /* Build configuration list for PBXProject "Space Patrol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D5D49A124618CDD00E74F51 /* Debug */,
+				6D5D49A224618CDD00E74F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D5D49A324618CDD00E74F51 /* Build configuration list for PBXNativeTarget "Space Patrol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D5D49A424618CDD00E74F51 /* Debug */,
+				6D5D49A524618CDD00E74F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D5D49A624618CDD00E74F51 /* Build configuration list for PBXNativeTarget "Space PatrolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D5D49A724618CDD00E74F51 /* Debug */,
+				6D5D49A824618CDD00E74F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D5D49A924618CDD00E74F51 /* Build configuration list for PBXNativeTarget "Space PatrolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D5D49AA24618CDD00E74F51 /* Debug */,
+				6D5D49AB24618CDD00E74F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D5D496D24618CDB00E74F51 /* Project object */;
+}
