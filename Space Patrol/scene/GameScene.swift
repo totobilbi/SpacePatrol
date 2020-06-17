@@ -73,6 +73,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var isEnemyBarrierOn = false
     
+    var isTouched:Bool = false
    
     
     /*
@@ -204,7 +205,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
      */
     func initPlayerTusik() {
         playerTusik.setScale(1.2)
-        playerTusik.position = CGPoint(x: self.size.width/2, y: -player.size.height-1)
+        playerTusik.position = CGPoint(x: self.size.width/2, y: -player.size.height)
         playerTusik.zPosition = 2
         self.addChild(playerTusik)
         scaleTusik()
@@ -285,7 +286,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //move ship to screen and start level
         let moveShip = SKAction.moveTo(y: self.size.height*0.2, duration: 0.5)
-        let moveShipTusik = SKAction.moveTo(y: self.size.height*0.2-player.size.height, duration: 0.5)
+        let moveShipTusik = SKAction.moveTo(y: self.size.height*0.2-player.size.height*1.2, duration: 0.5)
         let startLevel = SKAction.run(startNewLevel)
         player.run(moveShip)
         playerTusik.run(moveShipTusik) {
@@ -336,6 +337,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //amount of points to move background per second
     var amountToMove:CGFloat = 600.0
+    
+    //touch timer
+    var longTouchTimer:TimeInterval = 0
 
     //Move background once per frame
     override func update(_ currentTime: TimeInterval) {
@@ -352,6 +356,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             timePassed = currentTime - lastUpdateTime
             lastUpdateTime = currentTime
         }
+        
+        
+        //fire bullet if screen is touched
+        //animate the ship movment
+        longTouchTimer += timePassed
+        if isTouched && longTouchTimer > 0.3 && playerCanShoot {
+            longTouchTimer = 0
+            fireBullet()
+        }
+        
+    
+        playerShipAnimation(dragDirection)
+        
+        
+        
+
         
         //amount of points to move depneding on the time passed
         let amountToMoveBackground = amountToMove * CGFloat(timePassed)
@@ -574,12 +594,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Spawns explosion on a certain point
         */
     func spawnExplosion(spawnPosition: CGPoint) {
-        var scaleNum:CGFloat = 0
-        switch levelType {
-            case "boss": scaleNum = 3
-            default: scaleNum = 1
-        }
-        
         let explosion = SKSpriteNode(imageNamed: "explosion")
         explosion.position = spawnPosition
         explosion.zPosition = 3
@@ -587,7 +601,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(explosion)
 
 
-        let scaleIn = SKAction.scale(to: scaleNum, duration: 0.1)
+        let scaleIn = SKAction.scale(to: 1, duration: 0.1)
         let fadeOut = SKAction.fadeOut(withDuration: 0.1)
         let delete = SKAction.removeFromParent()
         let explosionSequence = SKAction.sequence([explosionSoundEffect ,scaleIn, fadeOut, delete])
@@ -1130,6 +1144,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
            bullet.run(bulletSequence)
        }
     
+
     
     /*
       preGame - starts the game on screen touch
@@ -1143,40 +1158,50 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
          }
          
          else if currentGameState == .inGame && playerCanShoot {
-             fireBullet()
+            isTouched = true
          }
      }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isTouched = false
+    }
      
      
      
+    var dragDirection:String = "none"
      /*
       Move the player left and right
       */
      override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
          
          for touch: AnyObject in touches {
-             if currentGameState == gameState.inGame {
-                 let pointOfTouch = touch.location(in: self)
+                if currentGameState == gameState.inGame {
+                let pointOfTouch = touch.location(in: self)
                  
-                 let previousPointOfTouch = touch.previousLocation(in: self)
+                let previousPointOfTouch = touch.previousLocation(in: self)
                  
-                 let amountDragged = pointOfTouch.x - previousPointOfTouch.x
+                let amountDragged = pointOfTouch.x - previousPointOfTouch.x
+                    
+                if amountDragged > 0 {
+                    dragDirection = "right"
+                } else if amountDragged < 0 {
+                    dragDirection = "left"
+                }
                  
-                 if player.position.x + amountDragged > gameArea.maxX {
-                     player.position.x = gameArea.maxX
-                     playerTusik.position.x = gameArea.maxX
-                 } else if player.position.x + amountDragged < gameArea.minX {
-                     player.position.x = gameArea.minX
-                     playerTusik.position.x = gameArea.minX
-                 } else {
-                      player.position.x += amountDragged
-                      playerTusik.position.x += amountDragged
-                 }
-             }
-         }
+                if player.position.x + amountDragged > gameArea.maxX {
+                    player.position.x = gameArea.maxX
+                    playerTusik.position.x = gameArea.maxX
+                } else if player.position.x + amountDragged < gameArea.minX {
+                    player.position.x = gameArea.minX
+                    playerTusik.position.x = gameArea.minX
+                } else {
+                    player.position.x += amountDragged
+                    playerTusik.position.x += amountDragged
+                }
+            }
+        }
+        
      }
-    
-    
     
     
     
@@ -1257,6 +1282,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         healthBar?.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
+
+
+
+    
+
+    
+    /*
+     
+      █████  ███    ██ ██ ███    ███  █████  ████████ ██  ██████  ███    ██
+     ██   ██ ████   ██ ██ ████  ████ ██   ██    ██    ██ ██    ██ ████   ██
+     ███████ ██ ██  ██ ██ ██ ████ ██ ███████    ██    ██ ██    ██ ██ ██  ██
+     ██   ██ ██  ██ ██ ██ ██  ██  ██ ██   ██    ██    ██ ██    ██ ██  ██ ██
+     ██   ██ ██   ████ ██ ██      ██ ██   ██    ██    ██  ██████  ██   ████
+     */
+    
+    
     
     /*
      Make the meteor rotation animation
@@ -1303,12 +1344,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let animation = SKAction.animate(with: frames, timePerFrame: 0.1)
         node.run(SKAction.repeatForever(animation))
     }
-
     
-
-
     
+    
+    /*
+     Change playerShip texture accoridng to fly direction
+     */
+    func playerShipAnimation(_ direction:String) {
+        if dragDirection != "none" {
+            let textureName = "playerShip"
+            var frames: [SKTexture] = []
+            
+            frames.append(SKTexture(imageNamed: "\(textureName)_\(direction)"))
+            frames.append(SKTexture(imageNamed: textureName))
+            dragDirection = "none"
 
+            let animation = SKAction.animate(with: frames, timePerFrame: 0.1)
+            player.run(animation)
+        }
+    }
+    
+    
+    
     
     /*
      ███████ ███    ██ ██████       ██████   █████  ███    ███ ███████
