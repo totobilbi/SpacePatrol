@@ -7,11 +7,11 @@ SpriteKit, swift
 
 
 # Chicken
-![](boss.gif)
+![](chicken.gif)
 
 
 # Meteor
-![](chicken.gif)
+![](meteor.gif)
 
 # Boss
 ![](boss.gif)
