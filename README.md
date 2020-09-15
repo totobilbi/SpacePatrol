@@ -4,5 +4,5 @@ Student project
 SpriteKit, swift
 
 
-# Demo GIF
+# Demo
 ![](boss.gif)
