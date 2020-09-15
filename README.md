@@ -1,4 +1,8 @@
 # SpacePatrol
-Space shooter game, student project,  SpriteKit, swift
+Space shooter game
+Student project
+SpriteKit, swift
 
+
+# Demo GIF
 ![](boss.gif)
