@@ -3,15 +3,16 @@ Space shooter game
 
 Student project
 
-SpriteKit, swift
+Devloped with Swift, SpriteKit
+
+
+# Meteor
+![](meteor.gif)
 
 
 # Chicken
 ![](chicken.gif)
 
-
-# Meteor
-![](meteor.gif)
 
 # Boss
 ![](boss.gif)
