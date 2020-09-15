@@ -6,6 +6,12 @@ Student project
 SpriteKit, swift
 
 
-# Demo
+# Chicken
+![](boss.gif)
 
+
+# Meteor
+![](chicken.gif)
+
+# Boss
 ![](boss.gif)
